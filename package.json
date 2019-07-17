@@ -1,0 +1,20 @@
+{
+  "name": "express-jwt-bcrypt",
+  "version": "1.0.0",
+  "description": "Expressjs with Jwt and Bcrypt",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "Express.js"
+  ],
+  "author": "Gnob",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
