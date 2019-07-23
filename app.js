@@ -7,6 +7,8 @@ const bcryptRouter = require("./routes/bcrypt/bcrypt");
 const jwtRouter = require("./routes/jwt/jwt");
 const mysqlRouter = require("./routes/mysql/mysql");
 const fsRouter = require("./routes/fs/fs");
+const uploadRouter = require("./routes/uploads/upload");
+const uploadsRouter = require("./routes/uploads/multiUpload");
 
 //Body Parser Middleware
 app.use(express.json());
@@ -16,6 +18,8 @@ app.use("/jwt", jwtRouter);
 app.use("/bcrypt", bcryptRouter);
 //app.use("/mysql", mysqlRouter);
 app.use("/fs", fsRouter);
+app.use("/upload", uploadRouter);
+app.use("/uploads", uploadsRouter);
 
 app.get("/home", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
